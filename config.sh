@@ -52,7 +52,7 @@ LATESTARTSERVICE=false
 
 # Custom Variables for Install AND Uninstall - Keep everything within this function - runs before uninstall/install
 unity_custom() {
-if [ -d /sys/devices/system/cpu/cpu0/cpufreq/]; then EAS=1; else EAS=0; fi
+if [ -d /sys/devices/system/cpu/cpu0/cpufreq/ ]; then EAS=1; else EAS=0; fi
   :
 }
 
