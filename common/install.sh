@@ -1,0 +1,1 @@
+if [ EAS -eq 1]; then cp -f $INSTALLER/custom/EAS $UNITY/system; else cp -f $INSTALLER/custom/HMP $UNITY/system; fi

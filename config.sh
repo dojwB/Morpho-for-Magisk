@@ -42,7 +42,7 @@ LATESTARTSERVICE=false
 # Uncomment DYNAMICAPP if you want anything in $INSTALLER/system/app to be installed to the optimal app directory (/system/priv-app if it exists, /system/app otherwise)
 # Uncomment SYSOVERRIDE if you want the mod to always be installed to system (even on magisk)
 # Uncomment DEBUG if you want full debug logs (saved to SDCARD)
-MINAPI=21
+#MINAPI=21
 #MAXAPI=25
 #SEPOLICY=true
 #SYSOVERRIDE=true
@@ -52,6 +52,7 @@ MINAPI=21
 
 # Custom Variables for Install AND Uninstall - Keep everything within this function - runs before uninstall/install
 unity_custom() {
+if [ -d /sys/devices/system/cpu/cpu0/cpufreq/]; then EAS=1; else EAS=0; fi
   :
 }
 
